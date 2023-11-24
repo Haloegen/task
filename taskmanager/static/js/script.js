@@ -5,11 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let datepicker = document.querySelectorAll('.datepicker');
     M.Datepicker.init(datepicker, {
-        format: "dd, mm, yyyy,",
+        format: "dd mmmmm, yyyy",
         i18n: { done: "Select" },
-
     });
 
     let selects = document.querySelectorAll('select');
     M.FormSelect.init(selects);
+
+
+    let display = document.querySelectorAll('.collapsible');
+    M.Collapsible.init(display);
 });
