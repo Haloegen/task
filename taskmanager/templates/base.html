@@ -35,31 +35,32 @@
           <ul class="right hide-on-med-and-down">
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('categories') }}">Categories</a></li>
-            <li><a href=>Javascript</a></li>
+            <li><a href="{{ url_for('add_task') }}">Tasks</a></li>
           </ul>
         </div>
       </nav>
       <!-- mobile side nav-->
       <ul class="sidenav" id="mobile-demo">
         <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('categories') }}">Categories</a></li>
-            <li><a href=>New Task</a></li>
-            <li><a href=>Javascript</a></li>
+        <li><a href="{{ url_for('categories') }}">Categories</a></li>
+        <li><a href="{{ url_for('add_task') }}">New Task</a></li>
       </ul>
     </header>
 
-    <main class="container">
-        {% block content %}
-        {% endblock %}
-    </main>
+    <main class="container">{% block content %} {% endblock %}</main>
 
     <footer class="page-footer darken-3">
-        <div class="footer-copyright">
-            <div class="container">
-                © 2014 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="https:///codeinstitute.net" target="_blank">%copy; Code Institute</a>
-            </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2014 Copyright Text
+          <a
+            class="grey-text text-lighten-4 right"
+            href="https:///codeinstitute.net"
+            target="_blank"
+            >%copy; Code Institute</a
+          >
         </div>
+      </div>
     </footer>
 
     <script src="{{ url_for('static', filename='js/script.js')}}"></script>
